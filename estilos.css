@@ -1,0 +1,57 @@
+*{
+    margin: 0;/*margen*/
+    padding: 0;/*separación*/
+    box-sizing: border-box;
+    /* toda pagina que se cree tiene que tener este reseteo de cosas, margen, pading y box */
+}
+
+body{
+    font-family: Arial;/*tipo de letra*/
+    font-size: 20px;/*tamaño de letra*/
+    min-height: 100vh; /*es una altura minimapara el 100% del navegador a lo largo*/
+    padding: 20px; 
+
+    display: grid;/*grid es una tecnologia de maquetado, */
+    gap: 15px;
+    grid-template-columns: 100px auto 300px;/*cuadricula de la plantilla columna*/
+    grid-template-rows: 50px auto 200px;/*cuadricula de la plantilla filas*/
+   
+}
+
+.mod{
+    box-shadow: 10px 6px 37px -13px rgba(8, 8, 8, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.encabezado{
+    background-color: steelblue;
+    grid-column: 1/4; /*sera desde la linea 1 hasta la linea 4*/
+
+}
+
+.navegacion{
+    background-color: tomato;
+    grid-column: 1/2;
+    grid-row: 2/4;/*Desde la linea 2 hasta la 4*/
+
+}
+
+.siderbar{
+    background-color: salmon;
+    grid-column: 1/4;
+}
+
+.principal{
+    background-color: teal;
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+
+.footer{
+    background-color: blueviolet;
+    grid-column: 1/4;
+}

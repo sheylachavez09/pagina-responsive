@@ -1,0 +1,103 @@
+*{
+    margin: 0;/*margen*/
+    padding: 0;/*separación*/
+    box-sizing: border-box;
+    /* toda pagina que se cree tiene que tener este reseteo de cosas, margen, pading y box */
+}
+
+body{
+    font-family: Arial;/*tipo de letra*/
+    font-size: 20px;/*tamaño de letra*/
+    min-height: 100vh; /*es una altura minimapara el 100% del navegador a lo largo*/
+    padding: 20px; 
+
+
+
+
+    display: grid;/*grid es una tecnologia de maquetado, */
+    gap: 15px;
+    
+    grid-template: 
+    "encabezado" 100px
+    "navegacion" 50px
+    "principal" auto
+    "siderbar" 50px
+    "footer" 50px
+
+     }
+
+.mod{
+    box-shadow: 10px 6px 37px -13px rgba(8, 8, 8, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.encabezado{
+    background-color: steelblue;
+    grid-area: encabezado;
+   
+}
+
+.navegacion{
+    background-color: tomato;
+    grid-area: navegacion;
+
+   
+}
+
+.siderbar{
+    background-color: salmon;
+    grid-area: siderbar;
+    }
+
+.principal{
+    background-color: teal;
+    grid-area: principal;
+   
+}
+
+
+.footer{
+    background-color: blueviolet;
+   grid-area: footer;
+}
+
+
+/* siempre hasta abajo de tu cadigo los mediaquerys */
+
+@media (min-width:768px){
+    body{
+    grid-template: 
+    "encabezado navegacion" 50px
+    "encabezado navegacion" 50px
+    "siderbar principal" auto
+    "footer footer" 100px/
+    200px auto;
+    
+    
+    }
+}
+
+
+@media (min-width:992px) {
+    body{
+        grid-template: 
+
+        "encabezado encabezado encabezado" 100px
+        "navegacion principal siderbar" auto
+        "footer footer footer" 100px/
+        200px auto 200px;
+    }
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+    }
+    
+}
+
+
+
